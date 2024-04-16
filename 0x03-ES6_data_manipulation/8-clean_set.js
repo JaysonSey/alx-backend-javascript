@@ -1,6 +1,6 @@
-function cleanSet(set, startString) {
+function cleanSet(Set, startString) {
   let result = '';
-  set.forEach((value) => {
+  Set.forEach((value) => {
     if (value.startsWith(startString)) {
       result += `${value.substring(startString.length)}-`;
     }
