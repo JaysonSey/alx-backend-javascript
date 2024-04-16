@@ -1,11 +1,12 @@
-function cleanSet(Set, startString) {
+export function cleanSet(Set, startString) {
   let result = '';
-  Set.forEach((value) => {
+  for (const value of Set) {
     if (value.startsWith(startString)) {
-      result += `${value.substring(startString.length)}-`;
+      result += `${value.slice(startString.length)}-`;
     }
-  });
-  return result.slice(0, -1);
+  }
+  if (result.length > 0) {
+    result = result.slice(0, -1);
+  }
+  return result;
 }
-
-export default cleanSet;
